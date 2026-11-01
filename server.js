@@ -101,9 +101,9 @@ app.post('/api/consulta', (req, res) => {
 
 // Endpoint para login
 app.post('/api/login', (req, res) => {
-    const {usuario, password } = req.body;
+    const {usuario, contraseña } = req.body;
     // Validar los campos
-    if (!usuario || !password) {
+    if (!usuario || !contraseña) {
         return res.status(400).json({
             error: 'Todos los campos son obligatorios'
         });
