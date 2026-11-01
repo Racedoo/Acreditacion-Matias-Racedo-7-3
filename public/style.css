@@ -48,6 +48,11 @@ nav a:hover {
   color: #0080ff;
 }
 
+#boton-login{
+  all: unset;
+  cursor: pointer;
+}
+
 #inicio-saludo {
   color: white;
   font-family: "Inter", sans-serif;
