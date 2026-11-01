@@ -300,9 +300,9 @@ span {
   text-align: center;
 }
 
-/* seccion formación */
+/* seccion servicios */
 
-.formacion-h2 {
+.servicios-h2 {
   color: #0080ff;
   text-shadow: 0 0 20px #0080ff;
   font-family: "Inter", sans-serif;
@@ -340,7 +340,7 @@ span {
   transition: 300ms ease-out;
 }
 
-#formacion {
+#servicios {
   padding-top: 80px;
   display: flex;
   flex-direction: column;
@@ -352,7 +352,7 @@ span {
   margin: 0 auto;
 }
 
-.contenedor-formacion {
+.contenedor-servicios {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -382,14 +382,6 @@ span {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
-}
-
-.estado {
-  color: #0080ff;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: normal;
-  padding-bottom: 29px;
 }
 
 .btn {
@@ -845,9 +837,9 @@ textarea:focus {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* formación */
+  /* servicios */
 
-  .contenedor-formacion {
+  .contenedor-servicios {
     grid-template-columns: 1fr;
   }
 
@@ -938,9 +930,9 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
-  /* formacion */
+  /* servicios */
 
-  .contenedor-formacion {
+  .contenedor-servicios {
     grid-template-columns: 1fr;
   }
 
