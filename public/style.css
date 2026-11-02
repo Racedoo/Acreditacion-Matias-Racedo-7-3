@@ -45,7 +45,7 @@ nav a {
 
 nav a:hover {
   transition: 300ms ease-out;
-  color: #0080ff;
+  color: #0085F6;
 }
 
 #boton-login{
@@ -70,7 +70,7 @@ h1 {
 }
 
 #incio-resaltado {
-  color: #007fff;
+  color: #0085F6;
   font-family: "Inter", sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -100,7 +100,7 @@ h1 {
 }
 
 .contenedor-redes:hover {
-  border-color: #0080ff;
+  border-color: #0085F6;
   border-radius: 50%;
   box-shadow: 0 0 20px rgba(0, 128, 255, 0.4);
 }
@@ -110,14 +110,14 @@ h1 {
 }
 
 #boton-cv {
-  background-color: #0080ff;
+  background-color: #0085F6;
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 16px;
   padding-bottom: 16px;
   border: 0;
   border-radius: 15px;
-  box-shadow: 0 4px 82px #0080ff;
+  box-shadow: 0 4px 82px #0085F6;
   cursor: pointer;
 }
 
@@ -173,7 +173,7 @@ h1 {
 }
 
 span {
-  color: #007fff;
+  color: #0085F6;
   font-weight: bold;
 }
 
@@ -202,8 +202,8 @@ span {
 }
 
 .tecnologias-h2 {
-  color: #0080ff;
-  text-shadow: 0 0 20px #0080ff;
+  color: #0085F6;
+  text-shadow: 0 0 20px #0085F6;
   font-family: "Inter", sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -239,8 +239,8 @@ span {
 }
 
 .tecnologia:hover {
-  box-shadow: 0 4px 42px #0080ff;
-  border: 3px solid #007fff;
+  box-shadow: 0 4px 42px #0085F6;
+  border: 3px solid #0085F6;
   transition: 300ms ease-out;
 }
 
@@ -255,8 +255,8 @@ span {
 }
 
 .habilidades-h2 {
-  color: #0080ff;
-  text-shadow: 0 0 20px #0080ff;
+  color: #0085F6;
+  text-shadow: 0 0 20px #0085F6;
   font-family: "Inter", sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -279,8 +279,8 @@ span {
 }
 
 .habilidad:hover {
-  box-shadow: 0 4px 42px #0080ff;
-  border: 3px solid #007fff;
+  box-shadow: 0 4px 42px #0085F6;
+  border: 3px solid #0085F6;
   transition: 300ms ease-out;
 }
 
@@ -303,8 +303,8 @@ span {
 /* seccion servicios */
 
 .servicios-h2 {
-  color: #0080ff;
-  text-shadow: 0 0 20px #0080ff;
+  color: #0085F6;
+  text-shadow: 0 0 20px #0085F6;
   font-family: "Inter", sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -335,8 +335,8 @@ span {
 }
 
 .curso:hover {
-  box-shadow: 0 4px 42px #0080ff;
-  border: 3px solid #007fff;
+  box-shadow: 0 4px 42px #0085F6;
+  border: 3px solid #0085F6;
   transition: 300ms ease-out;
 }
 
@@ -390,14 +390,14 @@ span {
   font-family: "Sen", sans-serif;
   font-size: 20px;
   font-weight: bold;
-  background-color: #0080ff;
+  background-color: #0085F6;
   padding-left: 34px;
   padding-right: 34px;
   padding-top: 16px;
   padding-bottom: 16px;
   border: 0;
   border-radius: 15px;
-  box-shadow: 0 4px 82px #0080ff;
+  box-shadow: 0 4px 82px #0085F6;
   margin-bottom: 18px;
 }
 
@@ -409,8 +409,8 @@ span {
 /* seccion experiencia */
 
 .experiencia-h2 {
-  color: #0080ff;
-  text-shadow: 0 0 20px #0080ff;
+  color: #0085F6;
+  text-shadow: 0 0 20px #0085F6;
   font-family: "Inter", sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -442,8 +442,8 @@ span {
 }
 
 .experiencia-tarjeta:hover {
-  box-shadow: 0 4px 42px #0080ff;
-  border: 3px solid #007fff;
+  box-shadow: 0 4px 42px #0085F6;
+  border: 3px solid #0085F6;
   transition: 300ms ease-out;
 }
 
@@ -464,7 +464,7 @@ span {
 .icono-trabajo {
   padding: 20px;
   height: 104px;
-  border: 2px solid #007fff;
+  border: 2px solid #0085F6;
   border-radius: 25px;
   box-sizing: border-box;
   margin-left: 46px;
@@ -485,7 +485,7 @@ span {
 }
 
 .empresa {
-  color: #007fff;
+  color: #0085F6;
   font-family: "Inter", sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -498,7 +498,7 @@ span {
 }
 
 .fecha p {
-  color: #007fff;
+  color: #0085F6;
   font-family: "Inter", sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -528,8 +528,8 @@ span {
 /* seccion proyectos */
 
 .proyectos-h2 {
-  color: #0080ff;
-  text-shadow: 0 0 20px #0080ff;
+  color: #0085F6;
+  text-shadow: 0 0 20px #0085F6;
   font-family: "Inter", sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -643,8 +643,8 @@ span {
 }
 
 .contacto-h2 {
-  color: #0080ff;
-  text-shadow: 0 0 20px #0080ff;
+  color: #0085F6;
+  text-shadow: 0 0 20px #0085F6;
   font-family: "Inter", sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -680,14 +680,14 @@ input {
 }
 
 input:hover {
-  box-shadow: 0 4px 42px #0080ff;
-  border: 2px solid #007fff;
+  box-shadow: 0 4px 42px #0085F6;
+  border: 2px solid #0085F6;
   transition: 300ms ease-out;
 }
 
 input:focus {
-  box-shadow: 0 4px 42px #0080ff;
-  border: 2px solid #0080ff;
+  box-shadow: 0 4px 42px #0085F6;
+  border: 2px solid #0085F6;
   outline: none;
 }
 
@@ -717,13 +717,13 @@ textarea {
 }
 
 textarea:hover {
-  box-shadow: 0 4px 42px #0080ff;
-  border: 2px solid #007fff;
+  box-shadow: 0 4px 42px #0085F6;
+  border: 2px solid #0085F6;
   transition: 300ms ease-out;
 }
 
 textarea:focus {
-  border: 2px solid #0080ff;
+  border: 2px solid #0085F6;
   outline: none;
 }
 
@@ -739,14 +739,14 @@ textarea:focus {
   font-family: "Sen", sans-serif;
   font-size: 20px;
   font-weight: bold;
-  background-color: #0080ff;
+  background-color: #0085F6;
   padding-left: 34px;
   padding-right: 34px;
   padding-top: 16px;
   padding-bottom: 16px;
   border: 0;
   border-radius: 15px;
-  box-shadow: 0 4px 82px #0080ff;
+  box-shadow: 0 4px 82px #0085F6;
   display: flex;
   justify-content: center;
   align-items: center;
