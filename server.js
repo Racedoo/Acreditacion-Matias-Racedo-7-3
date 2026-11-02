@@ -134,12 +134,15 @@ app.post('/api/login', (req, res) => {
     });
 });
 
-// Endpoint para listar los problemas
+// Endopoint para problemas
+
 app.get('/api/problemas', verificarSesion, (req, res) => {
     const sql = `
-        SELECT c.nombre, p.tipo_problema, p.nivel_urgencia, p.problema
+        SELECT p.id_problema, c.nombre, p.tipo_problema, p.nivel_urgencia,
+               p.problema, p.leida, p.fecha
         FROM problema p
         INNER JOIN cliente c ON c.id_cliente = p.id_cliente
+        ORDER BY p.fecha DESC
     `;
 
     db.query(sql, (err, resultado) => {
@@ -148,6 +151,21 @@ app.get('/api/problemas', verificarSesion, (req, res) => {
             return res.status(500).json({ error: 'Error al obtener los problemas' });
         }
         res.json(resultado);
+    });
+});
+
+// Endpoint para cambiar el estadod e un problema a leída o no leída
+
+app.put('/api/problemas/:id/leida', verificarSesion, (req, res) => {
+    const { leida } = req.body;
+    const sql = 'UPDATE problema SET leida = ? WHERE id_problema = ?';
+
+    db.query(sql, [leida, req.params.id], (err) => {
+        if (err) {
+            console.error('Error al actualizar estado:', err);
+            return res.status(500).json({ error: 'Error al actualizar' });
+        }
+        res.json({ message: 'Estado actualizado' });
     });
 });
 

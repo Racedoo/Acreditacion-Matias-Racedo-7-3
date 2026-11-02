@@ -12,6 +12,9 @@
                         <th>Tipo de Problema</th>
                         <th>Nivel de Urgencia</th>
                         <th>Problema</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
                     </tr>
                 </thead>
                 <tbody id="tabla-problemas">
@@ -28,16 +31,41 @@
             const problemas = await respuesta.json();
 
             problemas.forEach(p => {
-                const tr = document.createElement('tr');
-                [p.nombre, p.tipo_problema, p.nivel_urgencia, p.problema].forEach(texto => {
-                    const td = document.createElement('td');
-                    td.textContent = texto;
-                    tr.appendChild(td);
-                });
-                tabla.appendChild(tr);
-            });
-        }
+    const tr = document.createElement('tr');
 
+    [p.nombre, p.tipo_problema, p.nivel_urgencia, p.problema,
+     new Date(p.fecha).toLocaleString('es-UY')].forEach(texto => {
+        const td = document.createElement('td');
+        td.textContent = texto;
+        tr.appendChild(td);
+    });
+
+    // Estado
+    const tdEstado = document.createElement('td');
+    tdEstado.textContent = p.leida ? 'Leída' : 'No leída';
+    tdEstado.className = p.leida ? 'leida' : 'no-leida';
+    tr.appendChild(tdEstado);
+
+    // Botón para cambiar el estado
+    const tdAccion = document.createElement('td');
+    const boton = document.createElement('button');
+    boton.className = 'btn-estado';
+    boton.textContent = p.leida ? 'Marcar no leída' : 'Marcar leída';
+    boton.addEventListener('click', async () => {
+        await fetch('/api/problemas/' + p.id_problema + '/leida', {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ leida: p.leida ? 0 : 1 })
+        });
+        tabla.innerHTML = ''; 
+        cargarProblemas();      
+    });
+    tdAccion.appendChild(boton);
+    tr.appendChild(tdAccion);
+
+    tabla.appendChild(tr);
+});
+        }
         cargarProblemas();
     </script>
 </body>
