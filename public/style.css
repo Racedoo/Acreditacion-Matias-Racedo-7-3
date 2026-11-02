@@ -192,58 +192,6 @@ span {
   font-weight: normal;
 }
 
-#tecnologias {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #1c2226;
-  padding: 80px 0;
-}
-
-.tecnologias-h2 {
-  color: #0085F6;
-  text-shadow: 0 0 20px #0085F6;
-  font-family: "Inter", sans-serif;
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 32px;
-}
-
-.contenedor-tecnologias {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  width: 80%;
-}
-
-.contenedor-tecnologias h3 {
-  color: white;
-  font-family: "Inter", sans-serif;
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.tecnologia {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #141a2e;
-  gap: 10px;
-  height: 246px;
-  border-radius: 25px;
-  border: 2px solid #2a3150;
-  box-sizing: border-box;
-  justify-content: center;
-  border: 3px solid transparent;
-}
-
-.tecnologia:hover {
-  box-shadow: 0 4px 42px #0085F6;
-  border: 3px solid #0085F6;
-  transition: 300ms ease-out;
-}
-
 /* seccion habilidades */
 
 #habilidades {
@@ -406,229 +354,6 @@ span {
   background-color: #000000;
 }
 
-/* seccion experiencia */
-
-.experiencia-h2 {
-  color: #0085F6;
-  text-shadow: 0 0 20px #0085F6;
-  font-family: "Inter", sans-serif;
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 32px;
-}
-
-#experiencia {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #1c2226;
-  padding: 80px 0;
-}
-
-.experiencia-p {
-  color: white;
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  font-weight: normal;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
-.contenedor-experiencia {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.experiencia-tarjeta:hover {
-  box-shadow: 0 4px 42px #0085F6;
-  border: 3px solid #0085F6;
-  transition: 300ms ease-out;
-}
-
-.experiencia-tarjeta {
-  background-color: #141a2e;
-  border: 3px solid transparent;
-  display: flex;
-  flex-direction: row;
-}
-
-.experiencia-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.icono-trabajo {
-  padding: 20px;
-  height: 104px;
-  border: 2px solid #0085F6;
-  border-radius: 25px;
-  box-sizing: border-box;
-  margin-left: 46px;
-  margin-right: 46px;
-  margin-top: 40px;
-}
-
-.contenido {
-  margin-top: 40px;
-}
-
-.experiencia-h3 {
-  color: white;
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-.empresa {
-  color: #0085F6;
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-.fecha {
-  display: flex;
-  align-items: center;
-}
-
-.fecha p {
-  color: #0085F6;
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  margin-left: 4px;
-}
-
-.experiencia-tarjeta {
-  border-radius: 25px;
-  border: 3px solid #2a3150;
-  box-sizing: border-box;
-}
-
-.experiencia-tarjeta ul {
-  margin-top: 24px;
-  margin-bottom: 46px;
-  list-style-position: inside;
-}
-
-.experiencia-tarjeta ul > li {
-  color: white;
-  line-height: 1.5;
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* seccion proyectos */
-
-.proyectos-h2 {
-  color: #0085F6;
-  text-shadow: 0 0 20px #0085F6;
-  font-family: "Inter", sans-serif;
-  font-size: 32px;
-  font-weight: bold;
-}
-
-#proyectos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #1c2226;
-  padding: 80px 0;
-}
-
-.contenedor-proyectos {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 80px;
-  margin: 0 auto;
-  width: 80%;
-}
-
-.proyecto-destacado {
-  height: 345px;
-  border-radius: 25px;
-}
-
-.contenedor-proyectos {
-  padding-top: 56px;
-}
-
-.card {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.proyecto-img {
-  width: 100%;
-  display: block;
-}
-
-/* TEXTO OCULTO */
-.overlay {
-  position: absolute;
-  inset: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 25px;
-  background: rgba(0, 77, 153, 0.83);
-
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.card:hover .overlay {
-  opacity: 1;
-}
-
-.overlay h3 {
-  color: white;
-  font-family: "Inter", sans-serif;
-  font-size: 32px;
-  font-weight: bold;
-  padding-bottom: 32px;
-}
-
-.overlay p {
-  color: white;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: normal;
-  padding-left: 32px;
-  padding-right: 32px;
-  line-height: 120%;
-  text-align: center;
-}
-
-.overlay-iconos {
-  display: flex;
-  gap: 30px;
-  padding-top: 40px;
-}
-
-#github-blanco {
-  width: 48px;
-  height: 48px;
-}
-
-#figma-blanco {
-  width: 48px;
-  height: 48px;
-}
-
 /* seccion contacto */
 
 #contacto {
@@ -707,7 +432,7 @@ textarea {
   width: 100%;
   background-color: #1e1e1e;
   border: 0;
-  height: 417px;
+  height: 83px;
   border: 2px solid transparent;
   font-family: "Inter", sans-serif;
   font-size: 32px;
@@ -825,12 +550,6 @@ textarea:focus {
     padding: 0;
   }
 
-  /* tecnologias */
-
-  .contenedor-tecnologias {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   /* habilidades */
 
   .contenedor-habilidades {
@@ -919,12 +638,6 @@ textarea:focus {
     padding: 0;
   }
 
-  /* tecnologias */
-
-  .contenedor-tecnologias {
-    grid-template-columns: 1fr;
-  }
-
   /* habilidades */
   .contenedor-habilidades {
     grid-template-columns: 1fr;
@@ -933,35 +646,6 @@ textarea:focus {
   /* servicios */
 
   .contenedor-servicios {
-    grid-template-columns: 1fr;
-  }
-
-  /* experiencia */
-
-  .experiencia-tarjeta {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .icono-trabajo {
-    margin: 30px 0;
-  }
-
-  .contenido {
-    margin: 0 20px 30px;
-  }
-
-  .experiencia-p {
-    padding: 0 20px;
-  }
-
-  .fecha {
-    justify-content: center;
-  }
-
-  /* proyectos */
-  .contenedor-proyectos {
     grid-template-columns: 1fr;
   }
 
@@ -983,7 +667,7 @@ textarea:focus {
 
   textarea {
     font-size: 16px;
-    height: 200px;
+    height: 64px;
   }
 
   textarea::placeholder {
