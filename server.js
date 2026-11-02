@@ -34,6 +34,16 @@ db.connect(err => {
     }
 });
 
+// Autenticación simple
+let sesionIniciada = false;
+
+function verificarSesion(req, res, next) {
+    if (!sesionIniciada) {
+        return res.status(401).json({ error: 'No autorizado' });
+    }
+    next();
+}
+
 // Endpoint para registrar una consulta
 app.post('/api/consulta', (req, res) => {
     const {
@@ -101,13 +111,44 @@ app.post('/api/consulta', (req, res) => {
 
 // Endpoint para login
 app.post('/api/login', (req, res) => {
-    const {usuario, contraseña } = req.body;
-    // Validar los campos
+    const { usuario, contraseña } = req.body;
+
     if (!usuario || !contraseña) {
-        return res.status(400).json({
-            error: 'Todos los campos son obligatorios'
-        });
+        return res.status(400).json({ error: 'Todos los campos son obligatorios' });
     }
+
+    const sql = 'SELECT * FROM login WHERE usuario = ? AND contraseña = ?';
+
+    db.query(sql, [usuario, contraseña], (err, resultado) => {
+        if (err) {
+            console.error('Error en login:', err);
+            return res.status(500).json({ error: 'Error del servidor' });
+        }
+
+        if (resultado.length === 0) {
+            return res.status(401).json({ error: 'Usuario o contraseña incorrectos' });
+        }
+
+        sesionIniciada = true;
+        res.json({ message: 'Login correcto' });
+    });
+});
+
+// Endpoint para listar los problemas
+app.get('/api/problemas', verificarSesion, (req, res) => {
+    const sql = `
+        SELECT c.nombre, p.tipo_problema, p.nivel_urgencia, p.problema
+        FROM problema p
+        INNER JOIN cliente c ON c.id_cliente = p.id_cliente
+    `;
+
+    db.query(sql, (err, resultado) => {
+        if (err) {
+            console.error('Error al obtener problemas:', err);
+            return res.status(500).json({ error: 'Error al obtener los problemas' });
+        }
+        res.json(resultado);
+    });
 });
 
 

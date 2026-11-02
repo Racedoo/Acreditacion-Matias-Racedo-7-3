@@ -1,22 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla de problemas</title>
-</head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Tipo de Problema</th>
-                <th>Nivel de Urgencia</th>
-                <th>Problema</th>
-            </tr>
-        </thead>
-        <tbody id="tabla-problemas">
-            <!-- Aquí se llenarán los problemas desde el servidor -->
-        </tbody>
+    <main class="panel">
+        <div class="panel-header">
+            <h1>Problemas reportados</h1>
+        </div>
+
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tipo de Problema</th>
+                        <th>Nivel de Urgencia</th>
+                        <th>Problema</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-problemas">
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        const tabla = document.getElementById('tabla-problemas');
+
+        async function cargarProblemas() {
+            const respuesta = await fetch('/api/problemas');
+            const problemas = await respuesta.json();
+
+            problemas.forEach(p => {
+                const tr = document.createElement('tr');
+                [p.nombre, p.tipo_problema, p.nivel_urgencia, p.problema].forEach(texto => {
+                    const td = document.createElement('td');
+                    td.textContent = texto;
+                    tr.appendChild(td);
+                });
+                tabla.appendChild(tr);
+            });
+        }
+
+        cargarProblemas();
+    </script>
 </body>
-</html>
