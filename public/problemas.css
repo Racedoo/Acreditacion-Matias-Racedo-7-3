@@ -73,6 +73,16 @@ tbody tr:hover {
   background-color: #1e2540;
 }
 
-.btn-estado{
+.btn-estado, .btn-estado:active, .btn-estado:focus{
+    background-color: #0085F6;
     font-family: "Inter", sans-serif;
+    border: 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 82px #0085F6;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    padding: 8px 16px; 
 }
+
