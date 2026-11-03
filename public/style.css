@@ -268,15 +268,12 @@ span {
 }
 
 .curso {
-  display: grid;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background-color: #141a2e;
-  height: auto;
   border-radius: 25px;
-  justify-content: start;
-  height: auto;
   text-align: center;
   border: 3px solid transparent;
 }
