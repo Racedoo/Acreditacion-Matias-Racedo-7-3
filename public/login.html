@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
     <title>Login</title>
 </head>
 <body>
+    <div class="contendedor-login">
     <input type="text" id="usuario" placeholder="Usuario" required />
     <input type="password" id="contraseña" placeholder="Contraseña" required />
     <button type="button" id="iniciar-sesion">Iniciar sesión</button>
+    </div>
     <script>
 document.getElementById('iniciar-sesion').addEventListener('click', async () => {
     const usuario = document.getElementById('usuario').value.trim();
