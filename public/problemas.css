@@ -84,5 +84,6 @@ tbody tr:hover {
     border: none;
     outline: none;
     padding: 8px 16px; 
+    color: white;
 }
 
